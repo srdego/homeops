@@ -1,0 +1,7 @@
+customization:
+  systemExtensions:
+    officialExtensions:
+      # Intel CPU microcode updates
+      - siderolabs/intel-ucode
+      # Intel integrated GPU drivers and firmware
+      - siderolabs/i915
