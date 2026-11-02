@@ -1,3 +1,7 @@
 creation_rules:
   - path_regex: ^kubernetes/talos/clusters/[^/]+/secrets/.*
     age: age1jxus4fju2uly2sclhp0xgx75qd2ayky5vnn6yu4uwf3xfw9fwsfs4fd2x3
+
+stores:
+  yaml:
+    indent: 2
