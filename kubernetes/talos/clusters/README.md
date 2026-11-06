@@ -58,15 +58,24 @@ export SOPS_EDITOR="code --wait"
 
 Add this to your shell profile (`~/.bashrc` or `~/.zshrc`) to make it persistent.
 
-### Encryption
+### Editing
+
+Edit encrypted files directly with SOPS:
+
+```bash
+sops secrets/secrets.yaml
+```
+
+SOPS automatically decrypts the file, opens it in VS Code, and re-encrypts
+it when the editor is closed.
+
+### Encryption and decryption
 
 Encrypt files before committing:
 
 ```bash
 find secrets -type f -exec sops --encrypt --in-place {} \;
 ```
-
-### Decryption
 
 Decrypt a file to stdout:
 
@@ -79,17 +88,6 @@ Decrypt all files in place when necessary:
 ```bash
 find secrets -type f -exec sops --decrypt --in-place {} \;
 ```
-
-### Editing
-
-Edit encrypted files directly with SOPS:
-
-```bash
-sops secrets/secrets.yaml
-```
-
-SOPS automatically decrypts the file, opens it in VS Code, and re-encrypts
-it when the editor is closed.
 
 ## SecureBoot
 
