@@ -1,5 +1,5 @@
-clusterName: talos-single
-clusterEndpoint: https://talos-single-cp-01.aurux.net:6443
+clusterName: talos-cluster
+clusterEndpoint: https://talos-cp-01.aurux.net:6443
 kubernetesVersion: 1.37.1
 
 talosVersion: 1.14.5
@@ -16,7 +16,7 @@ data:
   allowControlPlaneScheduling: true
 
 nodes:
-  - host: talos-single-cp-01
+  - host: talos-cp-01
     role: control-plane
     data:
       diskSelector: /dev/nvme0n1
