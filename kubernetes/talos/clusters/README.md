@@ -1,6 +1,6 @@
-# Talos Single
+# Talos Cluster
 
-Talos single-node kubernetes cluster managed with TOPF.
+Talos kubernetes cluster managed with TOPF.
 
 ## Prerequisites
 
