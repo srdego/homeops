@@ -7,7 +7,7 @@ schematicId: "@schematic.yaml"
 platform: metal
 secureboot: true
 
-patchesDir: patches
+patchesDir: ../patches
 secretsPath: secrets/secrets.yaml
 
 data:
