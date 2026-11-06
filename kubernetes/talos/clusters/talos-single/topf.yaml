@@ -19,4 +19,4 @@ nodes:
   - host: talos-single-cp-01
     role: control-plane
     data:
-      diskSelector: /dev/sda
+      diskSelector: /dev/nvme0n1
