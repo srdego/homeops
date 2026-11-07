@@ -1,0 +1,22 @@
+clusterName: talos-cluster
+clusterEndpoint: https://talos-cp-01.aurux.net:6443
+kubernetesVersion: 1.37.1
+
+talosVersion: 1.14.5
+schematicId: "@schematic.yaml"
+platform: metal
+secureboot: true
+
+patchesDir: ../patches
+secretsPath: secrets/secrets.yaml
+
+data:
+  disableFlannelCNI: true
+  disableKubeProxy: true
+  allowControlPlaneScheduling: true
+
+nodes:
+  - host: talos-cp-01
+    role: control-plane
+    data:
+      diskSelector: /dev/nvme0n1

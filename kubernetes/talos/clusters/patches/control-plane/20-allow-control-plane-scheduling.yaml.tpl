@@ -1,0 +1,7 @@
+{{ if .Data.allowControlPlaneScheduling -}}
+apiVersion: v1alpha1
+kind: KubeNodeConfig
+taints:
+  node-role.kubernetes.io/control-plane:
+    $patch: delete
+{{- end }}
